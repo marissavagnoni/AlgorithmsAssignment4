@@ -25,38 +25,67 @@
 Solving by using formula: APSP(i,j,k) = min(APSP(i,j,k−1), APSP(i,k,k−1) + APSP(k,j,k−1))
 
 k = 0
+
 APSP(0,0,0) = 0 + 0 + 0 = 0
+
 APSP(0,1,0) = 0 + -2 = −2
+
 APSP(0,2,0) = 0 + 2 = 2
+
 APSP(1,0,0) = -2 + 0 = −2
+
 APSP(1,1,0) = -2 + -2 + 0 = −4
+
 APSP(1,2,0) = -2 + 2 = 0
+
 APSP(2,0,0) = 2 + 0 = 2
+
 APSP(2,1,0) = 2 + -2 = 0
+
 APSP(2,2,0) = 2 + 2 = 4
 
 k = 1
+
 Using APSP(0,1,0) = -2, APSP(1,0,0)=−2, APSP(1,1,0) =−4, APSP(1,2,0)=0, and APSP(2,1,0)=0
+
 APSP(0,0,1) = -2 + -2 = −4
+
 APSP(0,1,1) = -2 + -4 = −6
+
 APSP(0,2,1) = -2 + 0 = −2
+
 APSP(1,0,1) = -4 + -2 = −6
+
 APSP(1,1,1) = -4 + -4 = −8
+
 APSP(1,2,1) =-4 + 0 = −4
+
 APSP(2,0,1) = 0 + -2 = −2
+
 APSP(2,1,1) = 0 + -4 = −4
+
 APSP(2,2,1) = 0 + 0 = 0
 
 k = 2
+
 Using APSP(0,2,1)=−2, APSP(1,2,1)=−4, APSP(2,0,1)=−2, APSP(2,1,1)=−4, and APSP(2,2,1)=0
+
 APSP(0,0,2) = -2 + -2 = −4
+
 APSP(0,1,2) = -2 + -4 = −6
+
 APSP(0,2,2) = -2 + 0 = −2
+
 APSP(1,0,2) = -4 + -2 = −6
+
 APSP(1,1,2) = -4 + -4 = −8
+
 APSP(1,2,2) = -4 + 0 = −4
+
 APSP(2,0,2) = 0 + -2 = −2
+
 APSP(2,1,2) = 0 + -4 = −4
+
 APSP(2,2,2) = 0 + 0 = 0
 
 - **2b.** The relationship between APSP(i,j,1) and APSP(i,j,2) is that the mimimum of APSP(i,j,1) and APSP(i,j,1) + APSP(2,j,1) is APSP(i,j,2). Yes, the values from APSP(i,j,2) are created from the results from k = 1 which were computed from k = 0. 
